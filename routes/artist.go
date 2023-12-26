@@ -6,7 +6,7 @@ import (
 	"github.com/go-chi/chi"
 )
 
-func Routes() chi.Router {
+func ArtistRoutes() chi.Router {
 	r := chi.NewRouter()
 
 	r.Get("/artists", controllers.GetArtists)

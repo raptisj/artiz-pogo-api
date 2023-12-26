@@ -1,0 +1,380 @@
+[
+    {
+        "ID": "1023",
+        "artist_id": "5266",
+        "title": "Last Train Home",
+        "album": "Still Life (Talking)",
+        "year": 1987,
+        "duration": "5:42",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1032",
+        "artist_id": "5266",
+        "title": "The Way Up: Opening",
+        "album": "The Way Up",
+        "year": 2005,
+        "duration": "4:16",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1041",
+        "artist_id": "5266",
+        "title": "Bright Size Life",
+        "album": "Bright Size Life",
+        "year": 1976,
+        "duration": "4:45",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1050",
+        "artist_id": "5266",
+        "title": "Have You Heard",
+        "album": "Letter from Home",
+        "year": 1989,
+        "duration": "6:30",
+        "genre": "Contemporary Jazz"
+    },
+    {
+        "ID": "1069",
+        "artist_id": "5266",
+        "title": "Phase Dance",
+        "album": "Pat Metheny Group",
+        "year": 1978,
+        "duration": "8:21",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1078",
+        "artist_id": "5266",
+        "title": "Minuano (Six Eight)",
+        "album": "Still Life (Talking)",
+        "year": 1987,
+        "duration": "10:10",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1087",
+        "artist_id": "6182",
+        "title": "So What",
+        "album": "Kind of Blue",
+        "year": 1959,
+        "duration": "9:22",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1096",
+        "artist_id": "6182",
+        "title": "Freddie Freeloader",
+        "album": "Kind of Blue",
+        "year": 1959,
+        "duration": "9:46",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1105",
+        "artist_id": "6182",
+        "title": "All Blues",
+        "album": "Kind of Blue",
+        "year": 1959,
+        "duration": "11:32",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1114",
+        "artist_id": "6182",
+        "title": "Blue in Green",
+        "album": "Kind of Blue",
+        "year": 1959,
+        "duration": "5:37",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1123",
+        "artist_id": "6182",
+        "title": "Milestones",
+        "album": "Milestones",
+        "year": 1958,
+        "duration": "5:44",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1132",
+        "artist_id": "6182",
+        "title": "Round Midnight",
+        "album": "Round About Midnight",
+        "year": 1957,
+        "duration": "5:58",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1141",
+        "artist_id": "4989",
+        "title": "Giant Steps",
+        "album": "Giant Steps",
+        "year": 1960,
+        "duration": "4:49",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1150",
+        "artist_id": "4989",
+        "title": "My Favorite Things",
+        "album": "My Favorite Things",
+        "year": 1961,
+        "duration": "13:41",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1169",
+        "artist_id": "4989",
+        "title": "A Love Supreme Part I: Acknowledgement",
+        "album": "A Love Supreme",
+        "year": 1965,
+        "duration": "7:42",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1178",
+        "artist_id": "4989",
+        "title": "Naima",
+        "album": "Giant Steps",
+        "year": 1960,
+        "duration": "4:21",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1187",
+        "artist_id": "4989",
+        "title": "Resolution",
+        "album": "A Love Supreme",
+        "year": 1965,
+        "duration": "7:20",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1196",
+        "artist_id": "4989",
+        "title": "Afro Blue",
+        "album": "Giant Steps",
+        "year": 1963,
+        "duration": "10:49",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1204",
+        "artist_id": "7990",
+        "title": "Idle Moments",
+        "album": "Idle Moments",
+        "year": 1963,
+        "duration": "14:56",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1213",
+        "artist_id": "7990",
+        "title": "Grant's First Stand",
+        "album": "Grant's First Stand",
+        "year": 1961,
+        "duration": "15:57",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1222",
+        "artist_id": "7990",
+        "title": "Matador",
+        "album": "Matador",
+        "year": 1979,
+        "duration": "10:30",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1231",
+        "artist_id": "7990",
+        "title": "Blues for Lou",
+        "album": "Matador",
+        "year": 1979,
+        "duration": "11:33",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1240",
+        "artist_id": "7990",
+        "title": "Jean de Fleur",
+        "album": "The Main Attraction",
+        "year": 1976,
+        "duration": "11:16",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1259",
+        "artist_id": "7990",
+        "title": "Sookie, Sookie",
+        "album": "Green is Beautiful",
+        "year": 1970,
+        "duration": "7:20",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1268",
+        "artist_id": "7557",
+        "title": "Chameleon",
+        "album": "Head Hunters",
+        "year": 1973,
+        "duration": "15:41",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1277",
+        "artist_id": "7557",
+        "title": "Cantaloupe Island",
+        "album": "Empyrean Isles",
+        "year": 1964,
+        "duration": "5:32",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1286",
+        "artist_id": "7557",
+        "title": "Watermelon Man",
+        "album": "Takin' Off",
+        "year": 1962,
+        "duration": "7:09",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1295",
+        "artist_id": "7557",
+        "title": "Rockit",
+        "album": "Future Shock",
+        "year": 1983,
+        "duration": "5:25",
+        "genre": "Electro, Hip Hop"
+    },
+    {
+        "ID": "1303",
+        "artist_id": "7557",
+        "title": "Maiden Voyage",
+        "album": "Maiden Voyage",
+        "year": 1965,
+        "duration": "7:58",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1312",
+        "artist_id": "7557",
+        "title": "Cantelope Island",
+        "album": "Empyrean Isles",
+        "year": 1964,
+        "duration": "5:32",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1321",
+        "artist_id": "6079",
+        "title": "St. Thomas",
+        "album": "Saxophone Colossus",
+        "year": 1956,
+        "duration": "6:48",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1330",
+        "artist_id": "6079",
+        "title": "Oleo",
+        "album": "Saxophone Colossus",
+        "year": 1956,
+        "duration": "5:15",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1349",
+        "artist_id": "6079",
+        "title": "Blue Seven",
+        "album": "Saxophone Colossus",
+        "year": 1956,
+        "duration": "11:15",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1358",
+        "artist_id": "6079",
+        "title": "Autumn Nocturne",
+        "album": "Volume 2",
+        "year": 1957,
+        "duration": "6:42",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1367",
+        "artist_id": "6079",
+        "title": "Pent-Up House",
+        "album": "Saxophone Colossus",
+        "year": 1956,
+        "duration": "5:32",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1376",
+        "artist_id": "6079",
+        "title": "Doxy",
+        "album": "Saxophone Colossus",
+        "year": 1956,
+        "duration": "6:51",
+        "genre": "Jazz"
+    },
+    {
+        "ID": "1385",
+        "artist_id": "6588",
+        "title": "Stratus",
+        "album": "Spectrum",
+        "year": 1973,
+        "duration": "9:48",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1394",
+        "artist_id": "6588",
+        "title": "Red Baron",
+        "album": "Spectrum",
+        "year": 1973,
+        "duration": "6:34",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1402",
+        "artist_id": "6588",
+        "title": "Spanish Moss - A Sound Portrait",
+        "album": "Crosswinds",
+        "year": 1974,
+        "duration": "5:10",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1411",
+        "artist_id": "6588",
+        "title": "A Funky Thide of Sings",
+        "album": "A Funky Thide of Sings",
+        "year": 1975,
+        "duration": "23:21",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1628",
+        "artist_id": "6588",
+        "title": "Quadrant 4",
+        "album": "Spectrum",
+        "year": 1973,
+        "duration": "4:20",
+        "genre": "Jazz Fusion"
+    },
+    {
+        "ID": "1637",
+        "artist_id":"6588",
+        "title": "Le Lis",
+        "album": "Spectrum",
+        "year": 1973,
+        "duration": "5:57",
+        "genre": "Jazz Fusion"
+    }
+]

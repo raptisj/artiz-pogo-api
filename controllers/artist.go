@@ -3,7 +3,6 @@ package controllers
 import (
 	"artiz-pogo-api/models"
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/go-chi/chi"
@@ -25,8 +24,6 @@ func GetArtists(w http.ResponseWriter, r *http.Request) {
 
 func GetSingleArtist(w http.ResponseWriter, r *http.Request) {
 	artistID := chi.URLParam(r, "artistID")
-	fmt.Println(artistID)
-	fmt.Println("====")
 
 	db := models.DB
 	artist := models.Artist{ID: artistID}

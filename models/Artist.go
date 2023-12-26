@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type Artist struct {
 	gorm.Model
-	ID         string `gorm:"primarykey;size:16"`
+	ID         string `gorm:"primarykey"`
 	Name       string `json:"name"`
 	BirthYear  int    `json:"birth_year"`
 	DeathYear  int    `json:"death_year"`
