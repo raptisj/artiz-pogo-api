@@ -40,6 +40,7 @@ func main() {
 
 	r.Mount("/artists", routes.ArtistRoutes())
 	r.Mount("/songs", routes.SongRoutes())
+	r.Mount("/users", routes.AuthRoutes())
 
 	http.ListenAndServe(":8080", r)
 }

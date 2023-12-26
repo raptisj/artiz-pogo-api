@@ -42,6 +42,7 @@ func InitDB(cfg Config) {
 		}
 	}
 
+	db.AutoMigrate(&User{})
 	fmt.Println("Migrated database")
 
 	DB = db
