@@ -19,6 +19,10 @@ type Config struct {
 	SSLMode  string
 }
 
+// type Server struct {
+// 	DB: *gorm.DB
+// }
+
 var DB *gorm.DB
 
 func InitDB(cfg Config) {
