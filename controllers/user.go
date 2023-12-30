@@ -6,19 +6,29 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
 	"github.com/golang-jwt/jwt"
 )
 
-type Claims struct {
-	UID int   `json:"uid"`
-	Exp int64 `json:"exp"`
+type JwtClaims struct {
+	UID int    `json:"uid"`
+	Exp int64  `json:"exp"`
+	Iss string `json:"iss"`
+	Sub string `json:"sub"`
+	Aud string `json:"aud"`
+	Iat int64  `json:"iat"`
+	Nbf int64  `json:"nbf"`
 	jwt.StandardClaims
 }
 
-var jwtKey = []byte("my_secret_key")
+type JwtSecret struct {
+	Secret []byte `json:"secret"`
+}
+
+// var jwtKey = []byte("my_secret_key")
 
 func Signup(w http.ResponseWriter, r *http.Request) {
 	var user models.User
@@ -77,10 +87,16 @@ func Login(w http.ResponseWriter, r *http.Request) {
 	expirationTime := time.Now().Add(5 * time.Minute).Unix()
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
+		"iss": "localhost:8080",
+		"sub": "localhost",
+		"aud": "*",
 		"uid": existingUser.ID,
 		"exp": expirationTime,
+		"iat": time.Now().Unix(),
+		"nbf": time.Now().Unix(),
 	})
 
+	jwtKey := GetJwtSecret()
 	tokenString, err := token.SignedString(jwtKey)
 	if err != nil {
 		http.Error(w, "Claims could not be set", http.StatusBadRequest)
@@ -108,11 +124,12 @@ func CurrentUser(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(jsonObject)
 }
 
-func VerifyToken(authHeader string) (*Claims, error) {
+func VerifyToken(authHeader string) (*JwtClaims, error) {
 	prefix := "Bearer "
 	tokenString := strings.TrimPrefix(authHeader, prefix)
+	jwtKey := GetJwtSecret()
 
-	token, err := jwt.ParseWithClaims(tokenString, &Claims{}, func(token *jwt.Token) (interface{}, error) {
+	token, err := jwt.ParseWithClaims(tokenString, &JwtClaims{}, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
 		}
@@ -122,7 +139,7 @@ func VerifyToken(authHeader string) (*Claims, error) {
 		return nil, fmt.Errorf("authentication header not present or malformed")
 	}
 
-	claims, ok := token.Claims.(*Claims)
+	claims, ok := token.Claims.(*JwtClaims)
 
 	if ok {
 		if claims.Exp != 0 && claims.Exp < time.Now().Unix() {
@@ -133,4 +150,11 @@ func VerifyToken(authHeader string) (*Claims, error) {
 	}
 
 	return claims, nil
+}
+
+func GetJwtSecret() []byte {
+	jwt := &JwtSecret{}
+	jwt.Secret = []byte(os.Getenv("JWT_SIGN_KEY"))
+
+	return jwt.Secret
 }

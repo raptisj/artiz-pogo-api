@@ -19,14 +19,9 @@ type Config struct {
 	SSLMode  string
 }
 
-// type Server struct {
-// 	DB: *gorm.DB
-// }
-
 var DB *gorm.DB
 
 func InitDB(cfg Config) {
-
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=%s", cfg.Host, cfg.User, cfg.Password, cfg.DBName, cfg.Port, cfg.SSLMode)
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
@@ -46,6 +41,8 @@ func InitDB(cfg Config) {
 		}
 	}
 
+	// db.AutoMigrate(&Artist{})
+	// db.AutoMigrate(&Song{})
 	db.AutoMigrate(&User{})
 	fmt.Println("Migrated database")
 

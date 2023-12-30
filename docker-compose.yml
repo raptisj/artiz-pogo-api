@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: "go_api"
+    build: .
+    env_file:
+      - .env
+    ports:
+      - ${API_PORT}:${API_PORT}
+    networks:
+      - default
+    depends_on:
+      - db
+    volumes:
+      - ./artists.json:/app/artists.json
+      - ./songs.json:/app/songs.json
+
+  db:
+    container_name: "postgres_db"
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_HOST: ${DB_HOST}
+      POSTGRES_SSL: disable
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    networks:
+      - default
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
