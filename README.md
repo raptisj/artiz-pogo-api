@@ -12,6 +12,11 @@ An API that lists artists and their songs. Authenticated users can perform actio
 - [gorm](https://github.com/go-gorm/gorm) - an popular ORM for Golang
 - [bcrypt](https://pkg.go.dev/golang.org/x/crypto/bcrypt) - for hashing and comparing passwords
 
+
+### Usage
+
+You will need to install `golang-migrate`. For instructions see [here](https://github.com/golang-migrate/migrate/tree/master/cmd/migrate#unversioned)
+
 ### Features
 
 - custom auth
