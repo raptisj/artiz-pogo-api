@@ -42,10 +42,8 @@ func InitDB(cfg Config) {
 		}
 	}
 
-	// db.AutoMigrate(&Artist{})
-	// db.AutoMigrate(&Song{})
 	db.AutoMigrate(&User{})
-	fmt.Println("Migrated database")
+	fmt.Println("Database is ready")
 
 	DB = db
 }

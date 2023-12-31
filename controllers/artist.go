@@ -37,12 +37,3 @@ func GetSingleArtist(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(jsonData)
 }
-
-// artist := models.Artist{
-// 	Name:       "Jimi Hendrix",
-// 	BirthYear:  1942,
-// 	DeathYear:  1970,
-// 	Instrument: "Guitarist, singer",
-// 	Genre:      "Rock, funk, psychedelic rock",
-// 	Bio:        "One of the most innovative and influential guitarists of all time, known for his electrifying stage presence and groundbreaking use of distortion and feedback.",
-// }

@@ -6,7 +6,7 @@ build:
 
 .PHONY: run
 run:
-	docker-compose up
+	docker-compose up --build
 
 .PHONY: stop
 stop:
