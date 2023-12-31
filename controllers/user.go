@@ -28,8 +28,6 @@ type JwtSecret struct {
 	Secret []byte `json:"secret"`
 }
 
-// var jwtKey = []byte("my_secret_key")
-
 func Signup(w http.ResponseWriter, r *http.Request) {
 	var user models.User
 
@@ -103,9 +101,12 @@ func Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.WriteHeader(http.StatusCreated)
-	fmt.Fprintf(w, "User logged in successfully")
-	w.Write([]byte(tokenString))
+	jsonObject := map[string]interface{}{
+		"token": tokenString,
+	}
+
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(jsonObject)
 }
 
 func CurrentUser(w http.ResponseWriter, r *http.Request) {

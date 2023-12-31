@@ -13,9 +13,29 @@ An API that lists artists and their songs. Authenticated users can perform actio
 - [bcrypt](https://pkg.go.dev/golang.org/x/crypto/bcrypt) - for hashing and comparing passwords
 
 
-### Usage
+### Usage and info
 
-You will need to install `golang-migrate`. For instructions see [here](https://github.com/golang-migrate/migrate/tree/master/cmd/migrate#unversioned)
+```
+git clone git@github.com:raptisj/artiz-pogo-api.git
+cd ./artiz-pogo-api
+```
+
+To build your images: 
+```
+make build
+```
+
+To run your app: 
+```
+make run
+```
+
+To connect to psql: 
+```
+make psql
+```
+
+
 
 ### Features
 

@@ -27,7 +27,7 @@ func main() {
 	}
 
 	config := models.Config{
-		Host:     os.Getenv("DB_HOST"),
+		Host:     os.Getenv("DB_DOCKER_HOST"), // DB_DOCKER_HOST has a value of db. It's a workaround so it can play nice with docker
 		Port:     os.Getenv("DB_PORT"),
 		User:     os.Getenv("DB_USER"),
 		Password: os.Getenv("DB_PASSWORD"),

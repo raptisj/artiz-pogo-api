@@ -29,6 +29,7 @@ func InitDB(cfg Config) {
 		panic(err)
 	}
 
+	// Create table in database and seed tables with data from json file
 	if err = db.AutoMigrate(&Artist{}); err == nil && db.Migrator().HasTable(&Artist{}) {
 		if err := db.First(&Artist{}).Error; errors.Is(err, gorm.ErrRecordNotFound) {
 			SeedArtists(db)
