@@ -1,6 +1,6 @@
 [
     {
-        "ID": "5266",
+        "ID": 5266,
         "name": "Pat Metheny",
         "birth_year": 1954,
         "death_year": null,
@@ -9,7 +9,7 @@
         "bio": "Pat Metheny is an American jazz guitarist known for his innovative and diverse musical style. He has won numerous awards, including 20 Grammy Awards across various categories. Metheny's work spans jazz fusion, contemporary jazz, and beyond, showcasing his virtuosity and creativity."
     },
     {
-        "ID": "6182",
+        "ID": 6182,
         "name": "Miles Davis",
         "birth_year": 1926,
         "death_year": 1991,
@@ -18,7 +18,7 @@
         "bio": "Miles Davis was an American jazz trumpeter, bandleader, and composer. He was one of the most influential figures in the history of jazz."
     },
     {
-        "ID": "4989",
+        "ID": 4989,
         "name": "John Coltrane",
         "birth_year": 1926,
         "death_year": 1967,
@@ -27,7 +27,7 @@
         "bio": "John Coltrane was an American jazz saxophonist and composer. He was a pioneer of modal jazz and widely regarded as one of the most influential saxophonists in the history of jazz."
     },
     {
-        "ID": "7990",
+        "ID": 7990,
         "name": "Grant Green",
         "birth_year": 1935,
         "death_year": 1979,
@@ -36,7 +36,7 @@
         "bio": "Grant Green was an American jazz guitarist and composer. He was known for his distinctive sound and playing style, making him one of the most respected and influential jazz guitarists of his time."
     },
     {
-        "ID": "7557",
+        "ID": 7557,
         "name": "Herbie Hancock",
         "birth_year": 1940,
         "death_year": null,
@@ -45,7 +45,7 @@
         "bio": "Herbie Hancock is an American jazz pianist, keyboardist, bandleader, and composer. He is regarded as one of the most influential jazz musicians of the 20th century."
     },
     {
-        "ID": "6079",
+        "ID": 6079,
         "name": "Sonny Rollins",
         "birth_year": 1930,
         "death_year": null,
@@ -54,7 +54,7 @@
         "bio": "Sonny Rollins is an American jazz tenor saxophonist. Widely recognized as one of the most important and influential jazz musicians, Rollins has a prolific career spanning several decades."
     },
     {
-        "ID": "6588",
+        "ID": 6588,
         "name": "Billy Cobham",
         "birth_year": 1944,
         "death_year": null,

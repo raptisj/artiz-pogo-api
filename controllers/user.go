@@ -95,15 +95,23 @@ func Login(w http.ResponseWriter, r *http.Request) {
 
 func CurrentUser(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
-	userId := ctx.Value("userId")
-
-	fmt.Println("=====userId====")
-	fmt.Println(userId)
+	userId := ctx.Value("userId").(uint)
+	db := models.DB
+	user := models.User{ID: userId}
+	db.Find(&user)
 
 	jsonObject := map[string]interface{}{
-		"userId": userId,
+		"id":    user.ID,
+		"name":  user.Name,
+		"email": user.Email,
 	}
 
+	jsonData, err := json.Marshal(jsonObject)
+	if err != nil {
+		panic(err)
+	}
+
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(jsonObject)
+	w.Write(jsonData)
 }

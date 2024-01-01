@@ -9,7 +9,7 @@ import (
 )
 
 type JwtClaims struct {
-	UID int    `json:"uid"`
+	UID uint   `json:"uid"`
 	Exp int64  `json:"exp"`
 	Iss string `json:"iss"`
 	Sub string `json:"sub"`

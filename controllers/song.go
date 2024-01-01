@@ -3,19 +3,23 @@ package controllers
 import (
 	"artiz-pogo-api/models"
 	"encoding/json"
+	"fmt"
 	"net/http"
-	"strings"
+	"strconv"
 
 	"github.com/go-chi/chi"
 )
 
-func GetAllSongById(w http.ResponseWriter, r *http.Request) {
+func GetAllSongFromArtist(w http.ResponseWriter, r *http.Request) {
 	db := models.DB
 	songs := []models.Song{}
-	songIDs := r.URL.Query().Get("songIDs")
-	songIDsArray := strings.Split(songIDs, ",")
+	artistID := r.URL.Query().Get("artistID")
+	artistIDUint, err := strconv.ParseUint(artistID, 10, 32)
+	if err != nil {
+		fmt.Println("could not parse string")
+	}
 
-	db.Find(&songs, songIDsArray)
+	db.Where("artist_id", artistIDUint).Find(&songs)
 	jsonData, err := json.Marshal(songs)
 	if err != nil {
 		panic(err)
@@ -27,9 +31,13 @@ func GetAllSongById(w http.ResponseWriter, r *http.Request) {
 
 func GetSingleSong(w http.ResponseWriter, r *http.Request) {
 	songID := chi.URLParam(r, "songID")
+	songIDUint, err := strconv.ParseUint(songID, 10, 32)
+	if err != nil {
+		fmt.Println("could not parse string")
+	}
 
 	db := models.DB
-	song := models.Song{ID: songID}
+	song := models.Song{ID: uint(songIDUint)}
 
 	db.Find(&song)
 	jsonData, err := json.Marshal(song)
