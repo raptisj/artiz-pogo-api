@@ -18,6 +18,7 @@ func AuthRoutes() chi.Router {
 
 		r.Get("/current", controllers.CurrentUser)
 		r.Get("/likes/list", controllers.GetAllLikedSongs)
+		r.Get("/follow/list", controllers.GetAllFollowedArtist)
 	})
 
 	return r

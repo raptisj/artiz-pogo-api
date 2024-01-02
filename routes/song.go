@@ -10,17 +10,14 @@ import (
 func SongRoutes() chi.Router {
 	r := chi.NewRouter()
 
-	r.Route("/songs", func(r chi.Router) {
-		r.Get("/", controllers.GetAllSongsFromArtist)
-		r.Get("/{songID}", controllers.GetSingleSong)
+	r.Get("/songs", controllers.GetAllSongsFromArtist)
+	r.Get("/songs/{songID}", controllers.GetSingleSong)
 
-	})
-
-	r.Route("/songs/{songID}", func(r chi.Router) {
+	r.Route("/songs/{songID}/likes", func(r chi.Router) {
 		r.Use(middlewares.AuthCtx)
 
-		r.Post("/likes/add", controllers.AddLikeToSong)
-		r.Delete("/likes/remove", controllers.RemoveLikeFromSong)
+		r.Post("/add", controllers.AddLikeToSong)
+		r.Delete("/remove", controllers.RemoveLikeFromSong)
 	})
 
 	return r
