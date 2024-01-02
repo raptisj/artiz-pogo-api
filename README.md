@@ -1,5 +1,7 @@
 # 🎹 Artiz PoGo API 🥁
 
+_Still WIP_
+
 An API that lists artists and their songs. Authenticated users can perform actions such as liking a song, following an artist and creating playlists.
 
 ### Technologies
@@ -20,12 +22,7 @@ git clone git@github.com:raptisj/artiz-pogo-api.git
 cd ./artiz-pogo-api
 ```
 
-To build your images: 
-```
-make build
-```
-
-To run your app: 
+To build and run your images: 
 ```
 make run
 ```
