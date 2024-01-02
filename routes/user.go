@@ -15,7 +15,9 @@ func AuthRoutes() chi.Router {
 
 	r.Route("/users", func(r chi.Router) {
 		r.Use(middlewares.AuthCtx)
+
 		r.Get("/current", controllers.CurrentUser)
+		r.Get("/likes/list", controllers.GetAllLikedSongs)
 	})
 
 	return r

@@ -93,7 +93,7 @@ func GetAllLikedSongs(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 	userId := ctx.Value("userId").(uint)
 	db := models.DB
-	// songs := []models.Song{}
+	songs := []models.Song{}
 
 	songIDsArray := []uint{}
 	liked := []models.LikedSong{}
@@ -101,16 +101,14 @@ func GetAllLikedSongs(w http.ResponseWriter, r *http.Request) {
 	for _, like := range liked {
 		songIDsArray = append(songIDsArray, like.SongID)
 	}
-	fmt.Println("===songIDsArray===")
-	fmt.Println(songIDsArray)
 
-	// db.Find(&songs, songIDsArray)
-	// jsonData, err := json.Marshal(song)
-	// if err != nil {
-	// 	panic(err)
-	// }
+	db.Find(&songs, songIDsArray)
+	jsonData, err := json.Marshal(songs)
+	if err != nil {
+		panic(err)
+	}
 
-	// w.Header().Set("Content-Type", "application/json")
-	// w.WriteHeader(http.StatusOK)
-	// w.Write(jsonData)
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(jsonData)
 }

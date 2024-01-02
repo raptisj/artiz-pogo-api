@@ -19,7 +19,6 @@ func SongRoutes() chi.Router {
 	r.Route("/songs/{songID}", func(r chi.Router) {
 		r.Use(middlewares.AuthCtx)
 
-		r.Get("/likes/list", controllers.GetAllLikedSongs)
 		r.Post("/likes/add", controllers.AddLikeToSong)
 		r.Delete("/likes/remove", controllers.RemoveLikeFromSong)
 	})
