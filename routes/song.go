@@ -2,6 +2,7 @@ package routes
 
 import (
 	"artiz-pogo-api/controllers"
+	"artiz-pogo-api/middlewares"
 
 	"github.com/go-chi/chi"
 )
@@ -9,9 +10,18 @@ import (
 func SongRoutes() chi.Router {
 	r := chi.NewRouter()
 
-	r.Get("/songs", controllers.GetAllSongFromArtist)
+	r.Route("/songs", func(r chi.Router) {
+		r.Get("/", controllers.GetAllSongsFromArtist)
+		r.Get("/{songID}", controllers.GetSingleSong)
+
+	})
+
 	r.Route("/songs/{songID}", func(r chi.Router) {
-		r.Get("/", controllers.GetSingleSong)
+		r.Use(middlewares.AuthCtx)
+
+		r.Get("/likes/list", controllers.GetAllLikedSongs)
+		r.Post("/likes/add", controllers.AddLikeToSong)
+		r.Delete("/likes/remove", controllers.RemoveLikeFromSong)
 	})
 
 	return r

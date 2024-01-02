@@ -8,7 +8,7 @@ import (
 )
 
 func GenerateToken(userId uint) (*string, error) {
-	expirationTime := time.Now().Add(5 * time.Minute).Unix()
+	expirationTime := time.Now().Add(24 * time.Hour).Unix()
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"iss": "localhost:8080",
