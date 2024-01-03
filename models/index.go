@@ -45,6 +45,7 @@ func InitDB(cfg Config) {
 	db.AutoMigrate(&User{})
 	db.AutoMigrate(&LikedSong{})
 	db.AutoMigrate(&FollowArtist{})
+	db.AutoMigrate(&Playlist{})
 	fmt.Println("Database is ready")
 
 	DB = db
