@@ -1,13 +1,11 @@
 # 🎹 Artiz PoGo API 🥁
 
-_Still WIP_
-
-An API that lists artists and their songs. Authenticated users can perform actions such as liking a song, following an artist and creating playlists.
+An API that lists artists and their songs. Authenticated users can perform actions such as liking a song, following an artist, and creating playlists.
 
 ### Technologies
 **Po**stgres, **Go**lang and Docker.
 
-### Libaries
+### Libraries
 - [chi](https://github.com/go-chi/chi/tree/master) - lightweight router for building Go HTTP services
 - [golang-jwt](https://github.com/golang-jwt/jwt?tab=readme-ov-file) - to generate and verify JWTs
 - [godotenv](https://github.com/joho/godotenv) - to read environments variables
